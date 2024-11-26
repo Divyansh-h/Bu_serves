@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BU Serves - Bennett University Services</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <h1 class="navbar-title">BU Serves</h1>
+            <ul class="navbar-menu">
+                <li><a href="login.html" class="navbar-link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <h1 class="header-title">BU Serves</h1>
+            <p class="header-subtitle">Elevating Campus Life, One Service at a Time</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="services-grid">
+            <!-- BU Food Service -->
+            <div class="service-card" onclick="navigateTo('bu-food.html')">
+                <i class="fas fa-utensils service-icon orange"></i>
+                <h2 class="service-title">BU Food</h2>
+                <p class="service-description">Delicious Campus Cuisine</p>
+            </div>
+
+            <!-- BU Saloon Service -->
+            <div class="service-card" onclick="navigateTo('bu-saloon.html')">
+                <i class="fas fa-cut service-icon teal"></i>
+                <h2 class="service-title">BU Saloon</h2>
+                <p class="service-description">Style & Grooming Hub</p>
+            </div>
+
+            <!-- BU Laundry Service -->
+            <div class="service-card" onclick="navigateTo('bu-laundry.html')">
+                <i class="fas fa-tshirt service-icon purple"></i>
+                <h2 class="service-title">BU Laundry</h2>
+                <p class="service-description">Fresh & Clean Clothing</p>
+            </div>
+
+            <!-- BU Tuck Shop Service -->
+            <div class="service-card" onclick="navigateTo('bu-tuck-shop.html')">
+                <i class="fas fa-shopping-basket service-icon indigo"></i>
+                <h2 class="service-title">BU Tuck Shop</h2>
+                <p class="service-description">Campus Essentials Store</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 BU Serves. Transforming Campus Experience</p>
+        </div>
+    </footer>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

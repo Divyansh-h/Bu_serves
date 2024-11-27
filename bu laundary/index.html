@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laundry Service</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Logo -->
+      <img
+        id="logo"
+        src="assets/Capture-2024-11-26-191316.png"
+        alt="BU Laundry Logo"
+      />
+
+      <!-- Titles -->
+      <h1>BU Laundry</h1>
+      <h2>Laundry Service</h2>
+
+      <!-- Form -->
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="enrollment">Enrollment Number</label>
+          <input
+            type="text"
+            id="enrollment"
+            name="enrollment"
+            placeholder="Enter your enrollment number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="bag">Bag Number</label>
+          <input
+            type="text"
+            id="bag"
+            name="bag"
+            placeholder="Enter your bag number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      // Handle form submission
+      document
+        .querySelector("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+          const name = document.getElementById("name").value;
+          const enrollment = document.getElementById("enrollment").value;
+          const bag = document.getElementById("bag").value;
+
+          // Redirect to test.html with query parameters
+          window.location.href = `test.html?name=${encodeURIComponent(
+            name
+          )}&enrollment=${encodeURIComponent(
+            enrollment
+          )}&bag=${encodeURIComponent(bag)}`;
+        });
+    </script>
+  </body>
+</html>

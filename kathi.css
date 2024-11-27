@@ -1,3 +1,79 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Food Stalls Section */
+.stalls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.stall {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  effect: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.stall:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stall img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.stall h2 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  color: #333;
+}
+
+.stall p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 15px 20px;
+}
+
+/* Footer Styling */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
 /* Reset and Base Styles */
 * {
   margin: 0;
@@ -315,3 +391,6 @@ footer {
       margin: 10px 0;
   }
 }
+
+
+

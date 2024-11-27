@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f0f4f8;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #53a8b6;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 30px 0;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+#header-img {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 130px;
+  border-radius: 50%;
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/*booking form  main wala*/
+#booking-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  transition: transform 0.3s;
+}
+
+#booking-form:hover {
+  transform: translateY(-10px);
+}
+
+#booking-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+  color: #2980b9;
+}
+
+#booking-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+#booking-form input,
+#booking-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #bdc3c7;
+  border-radius: 8px;
+  background-color: #ecf0f1;
+  transition: border-color 0.3s;
+}
+
+#booking-form input:focus,
+#booking-form select:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+#booking-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#booking-form button:hover {
+  background-color: #2ecc71;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Booked Slots Section */
+#booked-slots {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  /*wow yar isaac aap bht cool ho*/
+}
+
+#booked-slots h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+  color: #e67e22;
+}
+
+#slotsList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#slotsList li {
+  background-color: #ecf0f1;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid #2980b9;
+  font-size: 1.1em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+#slotsList li:hover {
+  background-color: #d5dfe6;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  #booking-form,
+  #booked-slots {
+    padding: 20px;
+  }
+
+  #booking-form h2,
+  #booked-slots h2 {
+    font-size: 1.6em;
+  }
+}
+/* Services Section */
+#services {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+#services h2 {
+  font-size: 2em;
+  color: #2980b9;
+  margin-bottom: 20px;
+}
+
+.service-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-box {
+  background-color: #f0f4f8;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-box h3 {
+  font-size: 1.5em;
+  color: #27ae60;
+  margin-bottom: 15px;
+}
+
+.service-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #dcdcdc;
+}
+
+.service-box p {
+  font-size: 1em;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-box {
+    width: 100%;
+  }
+}
+/* New Service Selection Section */
+#service-selection {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+#service-selection h2 {
+  font-size: 2em;
+  color: #2980b9;
+  margin-bottom: 20px;
+}
+
+.service-selection-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.selection-box {
+  background-color: #f0f4f8;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.selection-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.selection-box h3 {
+  font-size: 1.5em;
+  color: #27ae60;
+  margin-bottom: 15px;
+}
+
+.service-selection-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #dcdcdc;
+}
+
+.selection-box button {
+  background-color: #2980b9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.selection-box button:hover {
+  background-color: #3498db;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .selection-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .service-selection-img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  #service-selection h2 {
+    font-size: 1.6em;
+  }
+
+  .selection-box h3 {
+    font-size: 1.2em;
+  }
+
+  .service-selection-img {
+    height: 100px;
+  }
+}
+
+/* Cart Section */
+#cart {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+#cart h2 {
+  font-size: 2em;
+  color: #2980b9;
+  margin-bottom: 20px;
+}
+
+#cartList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#cartList li {
+  background-color: #ecf0f1;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid #2980b9;
+  font-size: 1.1em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#checkout {
+  padding: 15px 30px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#checkout:hover {
+  background-color: #2ecc71;
+}
+/* Style for the Remove button in the cart */
+.remove-btn {
+  margin-left: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+}

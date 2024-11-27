@@ -1,149 +1,157 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
 /* Reset and Base Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 50;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
 .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
 }
 
 .navbar-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2d3748;
 }
 
 .navbar-menu {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .navbar-link {
-    color: #4a5568;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+  color: #4a5568;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .navbar-link:hover {
-    color: #3182ce;
+  color: #3182ce;
 }
 
 /* Header Styles */
 .header {
-    background: linear-gradient(to right, #7e22ce, #ec4899, #ef4444);
-    color: white;
-    text-align: center;
-    padding: 4rem 1rem;
+  background: linear-gradient(to right, #7e22ce, #ec4899, #ef4444);
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
 }
 
 .header-container {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .header-title {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header-subtitle {
-    font-size: 1.5rem;
-    opacity: 0.9;
+  font-size: 1.5rem;
+  opacity: 0.9;
 }
 
 /* Main Content & Services Grid */
 .main-content {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
 .service-card {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    overflow: hidden;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .service-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
 }
 
 .service-card:hover .service-icon {
-    transform: scale(1.1) rotate(10deg);
+  transform: scale(1.1) rotate(10deg);
 }
 
 .service-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-    color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #2d3748;
 }
 
 .service-description {
-    color: #718096;
+  color: #718096;
 }
 
 /* Icon Colors */
-.orange { color: #f6ad55; }
-.teal { color: #38b2ac; }
-.purple { color: #9f7aea; }
-.indigo { color: #667eea; }
+.orange {
+  color: #f6ad55;
+}
+.teal {
+  color: #38b2ac;
+}
+.purple {
+  color: #9f7aea;
+}
+.indigo {
+  color: #667eea;
+}
 
 /* Footer Styles */
 .footer {
-    background: linear-gradient(to right, #7e22ce, #ec4899, #ef4444);
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
+  background: linear-gradient(to right, #7e22ce, #ec4899, #ef4444);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }

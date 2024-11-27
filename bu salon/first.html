@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Hair Salon Booking</title>
+    <link rel="stylesheet" href="./style.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Bennett's Hair Salon</h1>
+        <p>Book your slot with ease!</p>
+        <img src="./bennett logo.png" alt="Hair salon logo lmao" id="header-img">
+    </header>
+
+    <section id="booking-form">
+        <h2>Book Your Appointment</h2>
+        <form id="appointmentForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Select Time Slot:</label>
+            <select id="time" name="time" required>
+                <option value="9:00 AM">9:00 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="1:00 PM">1:00 PM</option>
+                <option value="2:00 PM">2:00 PM</option>
+                <option value="3:00 PM">3:00 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
+                <option value="5:00 PM">5:00 PM</option>
+            </select>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <!-- Haircut Column -->
+            <div class="service-box" id="haircut">
+                <h3>Haircut</h3>
+                <img src="Screenshot 2024-11-26 at 7.08.49 PM.png" alt="Haircut Image" class="service-img">
+                <p>Professional haircuts tailored to your style.</p>
+            </div>
+
+            
+            <div class="service-box" id="beard">
+                <h3>Beard</h3>
+                <img src="Screenshot 2024-11-26 at 7.10.33 PM.png" alt="Beard Image" class="service-img">
+                <p>Expert beard grooming and shaping services.</p>
+            </div>
+
+            
+            <div class="service-box" id="both">
+                <h3>Haircut & Beard</h3>
+                <img src="Screenshot 2024-11-26 at 7.14.31 PM.png" alt="Haircut and Beard Image" class="service-img">
+                <p>Complete grooming package for your hair and beard.</p>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="service-selection">
+        <h2>Choose Your Service</h2>
+        <div class="service-selection-container">
+            <!-- Haircut Option -->
+            <div class="selection-box" id="select-haircut">
+                <h3>Haircut</h3>
+                <button onclick="addToCart('Haircut')">Choose Haircut</button>
+            </div>
+
+            
+            <div class="selection-box" id="select-beard">
+                <h3>Beard</h3>
+                <button onclick="addToCart('Beard')">Choose Beard</button>
+            </div>
+
+            
+            <div class="selection-box" id="select-both">
+                <h3>Haircut & Beard</h3>
+                <button onclick="addToCart('Haircut & Beard')">Choose Haircut & Beard</button>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cartList"></ul>
+        <button id="checkout" onclick="checkout()">Checkout</button>
+    </section>
+
+    <script>
+        // Array to store selected services
+        let cart = [];
+    
+        // Function to add service to cart
+        function addToCart(service) {
+            cart.push(service);
+            updateCartUI();
+        }
+    
+        // Function to update the cart UI
+        function updateCartUI() {
+            const cartList = document.getElementById('cartList');
+            cartList.innerHTML = ''; // Clear the current cart list
+    
+            // Display the services added to the cart
+            cart.forEach((item, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = item;
+    
+                // Create Remove button for each item
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.classList.add('remove-btn');
+                removeButton.onclick = function () {
+                    removeFromCart(index);
+                };
+    
+                // Append the button to the list item
+                listItem.appendChild(removeButton);
+                cartList.appendChild(listItem);
+            });
+        }
+    
+        // Function to remove a service from the cart
+        function removeFromCart(index) {
+            cart.splice(index, 1); // Remove the service from the cart array
+            updateCartUI(); // Update the cart UI after removal
+        }
+    
+        // Function for checkout (for now it just shows an alert)
+        function checkout() {
+            if (cart.length > 0) {
+                alert('Proceeding to checkout with the following items: ' + cart.join(', '));
+            } else {
+                alert('Your cart is empty. Please add services before checking out.');
+            }
+        }
+    </script>
+
+</body>
+</html>
